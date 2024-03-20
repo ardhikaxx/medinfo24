@@ -60,7 +60,7 @@ function tampilkanFormInputData() {
 
             if (nama && organisasi && keperluan) {
                 const linkWhatsApp = 'https://wa.me/6285747493573';
-                const pesan = `Assalamualaikum Wr. Wb. kak,\n\nPerkenalkan, saya ${nama} dari ${organisasi}. Kami tertarik untuk menjadi mitra media dalam ${keperluan} dan ingin mendapatkan persetujuan dari BEM KM POLIJE. Kami berharap dapat bekerja sama dengan baik untuk kepentingan bersama.\n\nTerima kasih atas perhatiannya, dan kami menunggu tanggapan dari BEM KM POLIJE.\n\nSalam.`;
+                const pesan = `Assalamualaikum Wr. Wb. kak,\n\nPerkenalkan, saya ${nama} dari ${organisasi}. Kami tertarik untuk menjadi media partner dalam tujuan ${keperluan} dan ingin mendapatkan persetujuan dari BEM KM POLIJE. Kami berharap dapat bekerja sama dengan baik untuk kepentingan bersama.\n\nTerima kasih atas perhatiannya, dan kami menunggu tanggapan dari BEM KM POLIJE.\n\nSalam.`;
 
                 window.open(`${linkWhatsApp}?text=${encodeURIComponent(pesan)}`);
             } else {
