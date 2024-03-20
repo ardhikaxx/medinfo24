@@ -2,10 +2,52 @@ const btnHubungi = document.querySelector('.btn-hubungi');
 
 btnHubungi.addEventListener('click', function () {
     Swal.fire({
-        title: 'Masukkan data dengan benar!',
+        title: 'Konfirmasi Persyaratan',
+        text: 'Apakah Anda sudah melakukan screenshoot minimal 10 akun aktif untuk follow Instagram BEM KM POLIJE @bempolije dan subscribe Youtube BEM POLIJE CHANNEL serta menyertakan bukti follow?',
+        icon: 'question',
+        iconColor: '#4F6F52',
+        showCancelButton: true,
+        confirmButtonText: 'Ya',
+        cancelButtonText: 'Belum',
+        cancelButtonColor: '#4F6F52',
+        confirmButtonColor: '#3A4D39',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: 'Konfirmasi Pembayaran',
+                text: 'Apakah Anda sudah mentransfer sebesar Rp 25.000,- melalui rekening (a.n Zulfianti Rahmawati : Dana – 085747493573)?',
+                icon: 'question',
+                iconColor: '#4F6F52',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Belum',
+                cancelButtonColor: '#4F6F52',
+                confirmButtonColor: '#3A4D39',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Pemberitahuan',
+                        text: 'Setelah Anda selesai melakukan pengisian data, Anda dapat mengirim bukti screenshoot 10 akun dan bukti transfer!',
+                        icon: 'info',
+                        iconColor: '#4F6F52',
+                        showConfirmButton: true,
+                        confirmButtonColor: '#3A4D39',
+                        confirmButtonText: 'Lanjut'
+                    }).then(() => {
+                        tampilkanFormInputData();
+                    });
+                }
+            });
+        }
+    });
+});
+
+function tampilkanFormInputData() {
+    Swal.fire({
+        title: 'Masukkan data anda!',
         html: '<input id="swal-nama" class="swal2-input swal-nama" placeholder="Nama Lengkap">' +
             '<input id="swal-organisasi" class="swal2-input swal-organisasi" placeholder="Nama Organisasi">' +
-            '<input id="swal-keperluan" class="swal2-input swal-keperluan" placeholder="Keperluan Anda">' ,
+            '<input id="swal-keperluan" class="swal2-input swal-keperluan" placeholder="Keperluan Anda">',
         confirmButtonText: 'Kirim',
         confirmButtonColor: '#3A4D39',
         showCancelButton: true,
@@ -18,7 +60,7 @@ btnHubungi.addEventListener('click', function () {
 
             if (nama && organisasi && keperluan) {
                 const linkWhatsApp = 'https://wa.me/6285747493573';
-                const pesan = `Assalamualaikum kak.\n\n perkenalkan nama saya ${nama}, Saya dari ${organisasi} ingin menjadi media partner untuk ${keperluan}. Kami ingin bekerjasama dengan organisasi BEM KM Polije.`;
+                const pesan = `Assalamualaikum Wr. Wb. kak,\n\nPerkenalkan, saya ${nama} dari ${organisasi}. Kami tertarik untuk menjadi mitra media dalam ${keperluan} dan ingin mendapatkan persetujuan dari BEM KM POLIJE. Kami berharap dapat bekerja sama dengan baik untuk kepentingan bersama.\n\nTerima kasih atas perhatiannya, dan kami menunggu tanggapan dari BEM KM POLIJE.\n\nSalam.`;
 
                 window.open(`${linkWhatsApp}?text=${encodeURIComponent(pesan)}`);
             } else {
@@ -38,4 +80,4 @@ btnHubungi.addEventListener('click', function () {
             showConfirmButton: false
         });
     });
-});
+}
