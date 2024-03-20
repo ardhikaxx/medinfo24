@@ -1,4 +1,5 @@
 const btnHubungi = document.querySelector('.btn-hubungi');
+
 btnHubungi.addEventListener('click', function () {
     Swal.fire({
         title: 'Masukkan data dengan benar!',
@@ -15,13 +16,14 @@ btnHubungi.addEventListener('click', function () {
             const organisasi = Swal.getPopup().querySelector('#swal-organisasi').value;
             const keperluan = Swal.getPopup().querySelector('#swal-keperluan').value;
 
-            if (nama && organisasi && keperluan && screenshot && transfer) {
+            if (nama && organisasi && keperluan) {
                 const linkWhatsApp = 'https://wa.me/6285747493573';
-                const pesan = `Assalamualaikum kak.\n\n perkanalkan nama saya ${nama}, Saya dari ${organisasi} ingin menjadi media partner untuk ${keperluan}. Kami ingin bekerjasama dengan organisasi BEM KM Polije.`;
+                const pesan = `Assalamualaikum kak.\n\n perkenalkan nama saya ${nama}, Saya dari ${organisasi} ingin menjadi media partner untuk ${keperluan}. Kami ingin bekerjasama dengan organisasi BEM KM Polije.`;
 
                 window.open(`${linkWhatsApp}?text=${encodeURIComponent(pesan)}`);
             } else {
-                Swal.showValidationMessage('Mohon lengkapi semua kolom dan unggah berkas');
+                Swal.showValidationMessage('Mohon lengkapi semua kolom');
+                return false;
             }
         }
     });
