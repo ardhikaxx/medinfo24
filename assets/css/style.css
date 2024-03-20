@@ -56,6 +56,54 @@ html {
   background: #ebebeb;
 }
 
+@media screen and (max-width: 768px) {
+  .swal-input-field {
+      width: 80vw !important;
+  }
+}
+
+.swal-actions {
+  background-color: #3A4D39 !important;
+}
+
+.btn-hubungi {
+  background-color: #3A4D39;
+  border: 2px solid transparent;
+  outline: 0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: #ece3ce;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-hubungi:hover {
+  background-color: transparent;
+  border: 2px solid #3A4D39;
+  color: #3A4D39;
+}
+
+.btn-more {
+  background-color: #3A4D39;
+  border: 2px solid transparent;
+  outline: 0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: #ece3ce;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-more:hover {
+  background-color: transparent;
+  border: 2px solid #3A4D39;
+  color: #3A4D39;
+}
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
