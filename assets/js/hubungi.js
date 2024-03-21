@@ -2,8 +2,10 @@ const btnHubungi = document.querySelector('.btn-hubungi');
 
 btnHubungi.addEventListener('click', function () {
     Swal.fire({
-        title: 'Konfirmasi Internal/Eksternal',
-        text: 'Apakah Anda adalah bagian dari internal atau eksternal?',
+        title: 'Konfirmasi',
+        html: '<h4 class:"fw-bold">Apakah Anda adalah bagian dari internal atau eksternal?</h4>' +
+            '<h6><strong>Internal:</strong> Ormawa di lingkup Politeknik Negeri Jember</h6>' +
+            '<h6><strong>Eksternal:</strong> Ormawa di luar Politeknik Negeri Jember</h6>',
         icon: 'question',
         iconColor: '#4F6F52',
         showCancelButton: true,

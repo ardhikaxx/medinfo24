@@ -66,6 +66,10 @@ html {
   background-color: #3A4D39 !important;
 }
 
+.konfirmasi p {
+  font-size: 12px;
+}
+
 .btn-hubungi {
   background-color: #3A4D39;
   border: 2px solid transparent;
