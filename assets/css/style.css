@@ -82,7 +82,7 @@ html {
 .btn-hubungi i {
   display: inline-block;
   font-size: 16px;
-  margin-left: 5px;
+  margin-left: 3px;
   animation: shake 1s infinite alternate;
 }
 
@@ -116,7 +116,7 @@ html {
 .btn-more i {
   display: inline-block;
   font-size: 16px;
-  margin-left: 5px;
+  margin-left: 3px;
   animation: moveInOut 1s infinite alternate;
 }
 
