@@ -8,22 +8,23 @@
     <link href="./assets/img/favicon.png" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/media.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
     <section class="py-5">
         <div class="container">
-            <div class="d-flex justify-content-center align-items-center flex-column text-center">
+            <div class="d-flex justify-content-center align-items-center flex-column text-center" data-aos="fade-down" data-aos-duration="3000">
                 <span class="text-muted">Kementerian Media Digital dan Informasi</span>
                 <h2 class="display-5 fw-bold mb-3">Media Partner</h2>
-                <button class="btn-hubungi mb-4" href="#">Hubungi</button>
+                <button class="btn-hubungi mb-4">Hubungi Kami <i class="fas fa-phone-alt"></i></button>
             </div>
             <div class="row gx-5">
                 <div class="col-md-6">
-                    <div class="lead text-start text-md-start">
-                        <p class="fw-bold">A. KETENTUAN PUBLIKASI</p>
-                        <ol>
+                    <div class="lead text-start text-md-start"  data-aos="fade-down" data-aos-duration="2000">
+                        <p class="fw-bold header">A. KETENTUAN PUBLIKASI</p>
+                        <ul class="custom-list">
                             <li>Publikasi berupa poster kegiatan atau event.</li>
                             <li>Poster event akan dibagikan sebanyak satu kali oleh BEM KM POLIJE melalui media sosial
                                 BEM KM POLIJE yang dipilih (Instagram, Twitter/X, Youtube, atau Line).</li>
@@ -31,28 +32,28 @@
                                 melakukan kerja sama.</li>
                             <li>Media partner wajib mencantumkan logo BEM KM POLIJE dan logo kabinet Bhakti Wirama
                                 sebagai tanda kerjasama sebagai media partner dengan BEM KM POLIJE
-                                Logo : <br>
-                                <a href="https://drive.google.com/drive/folders/1TYtoFtUKpUDmdWaMu9BQsaE9_dbOoVjV?usp=sharing"
-                                    target="_blank">Link Logo BEM</a>
+                                <br>
+                                Logo : <a href="https://drive.google.com/drive/folders/1TYtoFtUKpUDmdWaMu9BQsaE9_dbOoVjV?usp=sharing" target="_blank">Klik disini</a>
                             </li>
                             <li>Event atau kegiatan yang dipublikasi oleh BEM KM POLIJE minimal 7 hari dari
                                 penyelenggaraan kegiatan.</li>
                             <li>Reminder kegiatan akan dilakukan 1 kali pada Instastory @bempolije pada H-3 kegiatan.
                             </li>
-                        </ol>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="lead text-start text-md-start">
-                        <p class="fw-bold">B. KATEGORI PUBLIKASI</p>
-                        <ol>
+                    <div class="lead text-start text-md-start" data-aos="fade-down" data-aos-duration="2000">
+                        <p class="fw-bold header">B. KATEGORI PUBLIKASI</p>
+                        <ul class="custom-list">
                             <li>Internal</li>
                             <li>Eksternal (Umum)</li>
-                        </ol>
-                        <p class="fw-bold">C. ALUR</p>
-                        <ol>
-                            <li class="dropdown" onclick="toggleDropdown(this)">
-                                <h5>Internal <i class="fas fa-chevron-circle-down"></i></h5>
+                        </ul>
+                        <p class="fw-bold header">C. ALUR</p>
+                        <ul class="custom-list">
+                            <li class="dropdown">
+                                <h5 onclick="toggleDropdown(this)">Internal <i class="fas fa-chevron-circle-down"></i>
+                                </h5>
                                 <ul class="dropdown-content">
                                     <li>Media partner menghubungi narahubung Kementerian Media Digital dan Informasi.
                                     </li>
@@ -62,9 +63,10 @@
                                         ketentuan publikasi yang sudah dijelaskan.</li>
                                 </ul>
                             </li>
-                            <li class="dropdown" onclick="toggleDropdown(this)">
-                                <h5>Eksternal (Umum) <i class="fas fa-chevron-circle-down"></i></h5>
-                                <ol class="dropdown-content">
+                            <li class="dropdown">
+                                <h5 onclick="toggleDropdown(this)">Eksternal (Umum) <i
+                                        class="fas fa-chevron-circle-down"></i></h5>
+                                <ul class="dropdown-content">
                                     <li>Media partner wajib follow Instagram BEM KM POLIJE @bempolije dan subscribe
                                         Youtube BEM POLIJE CHANNEL minimal 10 akun.</li>
                                     <li>10 akun merupakan akun aktif, menyertakan bukti follow, username dan screenshot
@@ -77,9 +79,9 @@
                                         permintaan akan diproses ± 3 hari.</li>
                                     <li>Media partner akan dibagian di media sosial BEM KM POLIJE, sesuai dengan
                                         ketentuan publikasi yang sudah dijelaskan.</li>
-                                </ol>
+                                </ul>
                             </li>
-                        </ol>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -88,12 +90,16 @@
 
     <script>
         function toggleDropdown(element) {
-            element.classList.toggle("active");
-        }  
+            element.parentElement.classList.toggle('open');
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/hubungi.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

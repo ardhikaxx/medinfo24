@@ -47,10 +47,39 @@ p {
     transition: transform 0.3s ease;
 }
 
+.btn-hubungi i {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
+    animation: shake 1s infinite alternate;
+}
+
 .btn-hubungi:hover {
     background-color: transparent;
     border: 2px solid #3A4D39;
     color: #3A4D39;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateX(5px) rotate(-5deg);
+    }
+
+    75% {
+        transform: translateX(-1px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .fa-chevron-circle-down,
@@ -68,12 +97,46 @@ p {
 .dropdown-content {
     display: none;
     padding-left: 20px;
+    list-style: none;
 }
 
-.dropdown.active .dropdown-content {
+.dropdown.open .dropdown-content {
     display: block;
 }
 
-.dropdown.active .fa-chevron-circle-down {
+.dropdown.open .fa-chevron-circle-down {
     transform: rotate(180deg);
+}
+
+.header {
+    color: #3A4D39;
+}
+
+.custom-list {
+    list-style: none;
+    text-align: justify;
+    color: #4F6F52;
+}
+
+.custom-list a {
+    color: #4F6F52;
+    
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.custom-list li:before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 16px;
+    color: #4F6F52;
 }

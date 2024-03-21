@@ -58,7 +58,7 @@ html {
 
 @media screen and (max-width: 768px) {
   .swal-input-field {
-      width: 80vw !important;
+    width: 80vw !important;
   }
 }
 
@@ -79,10 +79,25 @@ html {
   transition: transform 0.3s ease;
 }
 
+.btn-hubungi i {
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 5px;
+  animation: shake 1s infinite alternate;
+}
+
 .btn-hubungi:hover {
   background-color: transparent;
   border: 2px solid #3A4D39;
   color: #3A4D39;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px) rotate(5deg); }
+  50% { transform: translateX(5px) rotate(-5deg); }
+  75% { transform: translateX(-1px) rotate(5deg); }
+  100% { transform: translateX(0); }
 }
 
 .btn-more {
@@ -98,10 +113,27 @@ html {
   transition: transform 0.3s ease;
 }
 
+.btn-more i {
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 5px;
+  animation: moveInOut 1s infinite alternate;
+}
+
 .btn-more:hover {
   background-color: transparent;
   border: 2px solid #3A4D39;
   color: #3A4D39;
+}
+
+@keyframes moveInOut {
+  0% {
+    transform: translateX(-2px);
+  }
+
+  100% {
+    transform: translateX(3px);
+  }
 }
 
 .back-to-top {
@@ -844,9 +876,7 @@ section {
     transform: rotate(360deg);
   }
 }
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+
 #footer {
   color: #444444;
   font-size: 14px;
