@@ -21,6 +21,11 @@
   <link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
   <link href="./assets/css/style.css" rel="stylesheet">
 
@@ -88,9 +93,10 @@
             </ul>
           </div>
         </div>
+      </div>
     </section>
 
-    <section class="py-2" id="media">
+    <section class="py-5" id="media">
       <div class="container d-flex justify-content-center align-items-center min-vh-100" style="margin-top: -5rem;">
         <div class="row justify-content-center" data-aos="fade-down" data-aos-duration="2000">
           <div class="col-md-12 col-lg-6">
@@ -100,9 +106,8 @@
               <p class="lead">Untuk persyaratan menjadi media partner Anda bisa mengeklik selengkapnya. Jika Anda sudah
                 membaca semua persyaratannya, Anda bisa mengeklik Hubungi. Terima kasih.</p>
               <div class="d-flex justify-content-center align-items-center">
-                <button class="btn-hubungi mt-2 me-3">Hubungi Kami <i class="fas fa-phone"></i></button>
-                <a class="btn-more mt-2" href="./media.html">Selengkapnya <i
-                    class="fas fa-chevron-circle-right"></i></a>
+                <button class="btn-hubungi mt-2 me-3">Hubungi Kami</button>
+                <a class="btn-more mt-2" href="./media.html">Selengkapnya</a>
               </div>
             </div>
           </div>
@@ -264,6 +269,30 @@
       </div>
     </section>
 
+    <section>
+      <div class="row">
+        <div class="container">
+          <section class="logo-carousel slider" data-arrows="false">
+            <div class="slide"><img src="./assets/img/Polije.png"></div>
+            <div class="slide"><img src="./assets/img/komersial-polije.png"></div>
+            <div class="slide"><img src="./assets/img/bem.png"></div>
+            <div class="slide"><img src="./assets/img/kabinet.png"></div>
+            <div class="slide"><img src="./assets/img/bluspeed.png"></div>
+            <div class="slide"><img src="./assets/img/Polije.png"></div>
+            <div class="slide"><img src="./assets/img/komersial-polije.png"></div>
+            <div class="slide"><img src="./assets/img/bem.png"></div>
+            <div class="slide"><img src="./assets/img/kabinet.png"></div>
+            <div class="slide"><img src="./assets/img/bluspeed.png"></div>
+            <div class="slide"><img src="./assets/img/Polije.png"></div>
+            <div class="slide"><img src="./assets/img/komersial-polije.png"></div>
+            <div class="slide"><img src="./assets/img/bem.png"></div>
+            <div class="slide"><img src="./assets/img/kabinet.png"></div>
+            <div class="slide"><img src="./assets/img/bluspeed.png"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="contact">
       <div class="container">
         <div class="section-title" data-aos="fade-down" data-aos-duration="2000">
@@ -317,7 +346,30 @@
   <script>
     AOS.init();
   </script>
-
+  <script>
+    $(document).ready(function() {
+      $('.logo-carousel').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 2
+          }
+        }]
+      });
+    });
+  </script>
 </body>
 
 </html>
