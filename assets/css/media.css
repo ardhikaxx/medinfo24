@@ -112,9 +112,13 @@ p {
     color: #3A4D39;
 }
 
+.text-header {
+    color: #3A4D39;
+}
+
 .custom-list {
     list-style: none;
-    text-align: justify;
+    text-align: start;
     color: #4F6F52;
 }
 
